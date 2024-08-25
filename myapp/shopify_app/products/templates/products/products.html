@@ -1,0 +1,28 @@
+<!-- products/templates/products/products.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopify Products</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <ul>
+        {% for product in products %}
+        <li>
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.body_html }}</p>
+            <ul>
+                {% for variant in product.variants %}
+                <li>
+                    SKU: {{ variant.sku }} - Price: {{ variant.price }} 
+                    - <img src="{{ variant.image.src }}" alt="Variant Image" style="width: 50px; height: auto;" />
+                    <a href="{% url 'update_product' product.id %}">Edit</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
