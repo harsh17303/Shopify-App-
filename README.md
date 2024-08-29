@@ -42,4 +42,4 @@ Copy code
 
 Open your browser and go to http://localhost:8000.    {UI to edit the product present in Shopify}
 
-Shopify-store link  eadf70-d5.myshopify.com	
+Shopify-store link  https://eadf70-d5.myshopify.com/	
